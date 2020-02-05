@@ -1,0 +1,29 @@
+evento_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Evento:prueba"}
+  methods: GET
+
+evento_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Evento:nuevo"}
+  methods: POST
+
+evento_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Evento:nuevo", id:null}
+  methods: POST
+
+evento_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Evento:lista"}
+  methods: POST
+
+evento_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Evento:informacion", id:null}
+  methods: POST
+
+evento_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Evento:eliminar", id:null}
+  methods: POST

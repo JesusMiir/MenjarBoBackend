@@ -1,0 +1,127 @@
+BackendBundle\Entity\Horario:
+    type: entity
+    table: horarios
+    indexes:
+        fk_restautante_horario:
+            columns:
+                - idRestaurante
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        lunesM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: lunesM
+        lunesT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: lunesT
+        martesM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: martesM
+        martesT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: martesT
+        miercolesM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: miercolesM
+        miercolesT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: miercolesT
+        juevesM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: juevesM
+        juevesT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: juevesT
+        viernesM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: viernesM
+        viernesT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: viernesT
+        sabadoM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: sabadoM
+        sabadoT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: sabadoT
+        domingoM:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: domingoM
+        domingoT:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: domingoT
+    manyToOne:
+        restaurante:
+            targetEntity: Restaurante
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idRestaurante:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

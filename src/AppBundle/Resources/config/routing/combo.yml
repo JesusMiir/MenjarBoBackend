@@ -1,0 +1,29 @@
+combo_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Combo:prueba"}
+  methods: GET
+
+combo_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Combo:nuevo"}
+  methods: POST
+
+combo_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Combo:nuevo", id:null}
+  methods: POST
+
+combo_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Combo:lista"}
+  methods: POST
+
+combo_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Combo:informacion", id:null}
+  methods: POST
+
+combo_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Combo:eliminar", id:null}
+  methods: POST

@@ -1,0 +1,73 @@
+BackendBundle\Entity\Conjuntoplatos:
+    type: entity
+    table: conjuntosPlatos
+    indexes:
+        fk_encargo:
+            columns:
+                - idEncargo
+        fk_menu:
+            columns:
+                - idMenu
+        fk_plato_conjuntoPlatos:
+            columns:
+                - idPlato
+        fk_combo_conjuntoPlatos:
+            columns:
+                - idCombo
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    cantidad:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: cantidad
+    manyToOne:
+        combo:
+            targetEntity: Combo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idCombo:
+                    referencedColumnName: id
+            orphanRemoval: false
+        encargo:
+            targetEntity: Encargo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idEncargo:
+                    referencedColumnName: id
+            orphanRemoval: false
+        menu:
+            targetEntity: Menu
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idMenu:
+                    referencedColumnName: id
+            orphanRemoval: false
+        plato:
+            targetEntity: Plato
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idPlato:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

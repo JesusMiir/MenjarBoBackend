@@ -1,0 +1,5 @@
+conjuntoElementos_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:ConjuntoElementos:prueba"}
+  methods: GET
+

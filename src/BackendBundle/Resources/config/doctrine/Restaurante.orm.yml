@@ -1,0 +1,50 @@
+BackendBundle\Entity\Restaurante:
+    type: entity
+    table: restaurantes
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        contrasena:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        telefono:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        email:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        direccionrestaurante:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: direccionRestaurante
+        tiempopedidos:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: tiempoPedidos
+    lifecycleCallbacks: {  }

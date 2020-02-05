@@ -1,0 +1,33 @@
+categoria_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Categoria:prueba"}
+  methods: GET
+
+categoria_nueva:
+  path: /nueva
+  defaults: { _controller: "AppBundle:Categoria:nueva"}
+  methods: POST
+
+categoria_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Categoria:nueva", id:null}
+  methods: POST
+
+categoria_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Categoria:lista"}
+  methods: POST
+
+categoria_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Categoria:informacion", id:null}
+  methods: POST
+
+categoria_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Categoria:eliminar", id:null}
+  methods: POST
+
+categoria_subir_imagen:
+  path: /subir-imagen/{id}
+  defaults: { _controller: "AppBundle:Categoria:subirImagen", id:null}

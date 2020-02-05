@@ -1,0 +1,41 @@
+BackendBundle\Entity\Conjuntoelementos:
+    type: entity
+    table: conjuntosElementos
+    indexes:
+        fk_plato_conjuntoElementos:
+            columns:
+                - idPlato
+        fk_combo_conjuntoElementos:
+            columns:
+                - idCombo
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        combo:
+            targetEntity: Combo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idCombo:
+                    referencedColumnName: id
+            orphanRemoval: false
+        plato:
+            targetEntity: Plato
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idPlato:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

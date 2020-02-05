@@ -1,0 +1,29 @@
+menu_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Menu:prueba"}
+  methods: GET
+
+menu_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Menu:nuevo"}
+  methods: POST
+
+menu_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Menu:nuevo", id:null}
+  methods: POST
+
+menu_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Menu:lista"}
+  methods: POST
+
+menu_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Menu:informacion", id:null}
+  methods: POST
+
+menu_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Menu:eliminar", id:null}
+  methods: POST

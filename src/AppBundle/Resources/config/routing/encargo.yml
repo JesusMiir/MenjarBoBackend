@@ -1,0 +1,55 @@
+encargo_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Encargo:prueba"}
+  methods: GET
+
+encargo_nuevo:
+  path: /nuevo/{email}
+  defaults: { _controller: "AppBundle:Encargo:nuevo"}
+  methods: POST
+
+encargo_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Encargo:editar", id:null}
+  methods: POST
+
+encargo_lista_restaurante:
+  path: /lista_restaurant 
+  defaults: { _controller: "AppBundle:Encargo:listaRestaurante"}
+  methods: POST
+
+encargo_lista_usuario:
+  path: /lista_usuario 
+  defaults: { _controller: "AppBundle:Encargo:listaUsuario"}
+  methods: POST
+
+encargo_informacion_restaurante:
+  path: /informacion_restaurante/{id}
+  defaults: { _controller: "AppBundle:Encargo:informacionRestaurante", id:null}
+  methods: POST
+
+encargo_informacion_usuario:
+  path: /informacion_usuario/{id}
+  defaults: { _controller: "AppBundle:Encargo:informacionUsuario", id:null}
+  methods: POST
+
+encargo_nuevo_informacion:
+  path: /info-nuevo
+  defaults: { _controller: "AppBundle:Encargo:informacionComandaNueva", id:null}
+  methods: POST
+
+encargo_realizados_informacion:
+  path: /info-realizados
+  defaults: { _controller: "AppBundle:Encargo:informacionComandaRealizada", id:null}
+  methods: POST
+
+encargo_restaurante_informacion:
+  path: /info-restaurante
+  defaults: { _controller: "AppBundle:Encargo:informacionEncargosRestaurante", id:null}
+  methods: POST
+
+encargo_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Encargo:eliminar", id:null}
+  methods: POST
+

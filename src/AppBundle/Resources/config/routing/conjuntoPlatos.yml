@@ -1,0 +1,19 @@
+conjuntoPatos_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:ConjuntoPlatos:prueba"}
+  methods: GET
+
+conjunto_platos_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:ConjuntoPlatos:nuevo"}
+  methods: POST
+
+conjunto_platos_lista:
+  path: /lista/{idEncargo}
+  defaults: { _controller: "AppBundle:ConjuntoPlatos:lista", idEncargo:null}
+  methods: POST
+
+conjunto_platos_restaurante_lista:
+  path: /lista/{idEncargo}
+  defaults: { _controller: "AppBundle:ConjuntoPlatos:listaRestaurante", idEncargo:null}
+  methods: POST

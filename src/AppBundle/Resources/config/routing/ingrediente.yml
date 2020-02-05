@@ -1,0 +1,29 @@
+ingrediente_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Ingrediente:prueba"}
+  methods: GET
+
+ingrediente_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Ingrediente:nuevo"}
+  methods: POST
+
+ingrediente_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Ingrediente:nuevo", id:null}
+  methods: POST
+
+ingrediente_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Ingrediente:lista"}
+  methods: POST
+
+ingrediente_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Ingrediente:informacion", id:null}
+  methods: POST
+
+ingrediente_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Ingrediente:eliminar", id:null}
+  methods: POST

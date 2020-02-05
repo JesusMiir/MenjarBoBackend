@@ -1,0 +1,54 @@
+BackendBundle\Entity\Usuario:
+    type: entity
+    table: usuarios
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+        apellidos:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        contrasena:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        telefono:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        email:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+        direccioncasa:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: direccionCasa
+        createat:
+            type: datetime
+            nullable: true
+            column: createAt
+    lifecycleCallbacks: {  }

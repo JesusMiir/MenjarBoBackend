@@ -1,0 +1,24 @@
+restaurante_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Restaurante:prueba"}
+  methods: GET
+
+restaurante_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Restaurante:nuevo"}
+  methods: POST
+
+restaurante_editar:
+  path: /editar
+  defaults: { _controller: "AppBundle:Restaurante:editar"}
+  methods: POST
+
+restaurante_editar_tiempo_espera:
+  path: /editar/tiempo-espera
+  defaults: { _controller: "AppBundle:Restaurante:editarTiempoEspera"}
+  methods: POST
+
+restaurante_informacion:
+  path: /informacion/{nombre}
+  defaults: { _controller: "AppBundle:Restaurante:informacion", nombre:null}
+  methods: POST

@@ -1,0 +1,81 @@
+BackendBundle\Entity\Encargo:
+    type: entity
+    table: encargos
+    indexes:
+        fk_usuario_encarrgo:
+            columns:
+                - idUsuario
+        fk_restautante_encarrgo:
+            columns:
+                - idRestaurante
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        estado:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+        preciototal:
+            type: float
+            nullable: true
+            precision: 255
+            scale: 2
+            column: precioTotal
+        informacionusuario:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: informacionUsuario
+        informacionrestaurante:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: informacionRestaurante
+        vivienda:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+        efectivo:
+            type: boolean
+            nullable: true
+        createat:
+            type: datetime
+            nullable: true
+            column: createAt
+    manyToOne:
+        restaurante:
+            targetEntity: Restaurante
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idRestaurante:
+                    referencedColumnName: id
+            orphanRemoval: false
+        usuario:
+            targetEntity: Usuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idUsuario:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+usuario_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Usuario:prueba"}
+  methods: GET
+
+usuario_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Usuario:nuevo"}
+  methods: POST
+
+usuario_editar:
+  path: /editar
+  defaults: { _controller: "AppBundle:Usuario:editar"}
+  methods: POST
+
+usuario_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Usuario:lista"}
+  methods: POST
+
+usuario_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Usuario:informacion", id:null}
+  methods: POST

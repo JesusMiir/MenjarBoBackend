@@ -1,0 +1,29 @@
+horario_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Horario:prueba"}
+  methods: GET
+
+horario_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Horario:nuevo"}
+  methods: POST
+
+horario_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Horario:nuevo", id:null}
+  methods: POST
+
+horario_lista:
+  path: /lista
+  defaults: { _controller: "AppBundle:Horario:lista"}
+  methods: POST
+
+horario_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Horario:informacion", id:null}
+  methods: POST
+
+horario_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Horario:eliminar", id:null}
+  methods: POST

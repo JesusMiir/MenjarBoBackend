@@ -1,0 +1,41 @@
+BackendBundle\Entity\Conjuntoingredientes:
+    type: entity
+    table: conjuntosIngredientes
+    indexes:
+        fk_plato_conjuntoIngredientes:
+            columns:
+                - idPlato
+        fk_ingrediente:
+            columns:
+                - idIngrediente
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        ingrediente:
+            targetEntity: Ingrediente
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idIngrediente:
+                    referencedColumnName: id
+            orphanRemoval: false
+        plato:
+            targetEntity: Plato
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idPlato:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

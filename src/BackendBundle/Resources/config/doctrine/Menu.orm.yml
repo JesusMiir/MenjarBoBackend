@@ -1,0 +1,80 @@
+BackendBundle\Entity\Menu:
+    type: entity
+    table: menus
+    indexes:
+        fk_restautante_menu:
+            columns:
+                - idRestaurante
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+        nombreprimero:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: nombrePrimero
+        descripcionprimero:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: descripcionPrimero
+        nombresegundo:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: nombreSegundo
+        descripcionsegundo:
+            type: string
+            nullable: true
+            length: 127
+            options:
+                fixed: false
+            column: descripcionSegundo
+        precio:
+            type: float
+            nullable: true
+            precision: 255
+            scale: 2
+        contadoractual:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: contadorActual
+        contadorgeneral:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: contadorGeneral
+    manyToOne:
+        restaurante:
+            targetEntity: Restaurante
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idRestaurante:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

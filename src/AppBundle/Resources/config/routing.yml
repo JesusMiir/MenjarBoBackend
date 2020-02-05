@@ -1,0 +1,55 @@
+app_default:
+  resource: "@AppBundle/Resources/config/routing/default.yml"
+  prefix: /
+
+app_categoria:
+  resource: "@AppBundle/Resources/config/routing/categoria.yml"
+  prefix: /categoria
+
+app_combo:
+  resource: "@AppBundle/Resources/config/routing/combo.yml"
+  prefix: /combo
+
+app_conjunto_elementos:
+  resource: "@AppBundle/Resources/config/routing/conjuntoElementos.yml"
+  prefix: /conjunto_elementos
+
+app_conjunto_ingredientes:
+  resource: "@AppBundle/Resources/config/routing/conjuntoIngredientes.yml"
+  prefix: /conjunto_ingredientes
+
+app_conjunto_patos:
+  resource: "@AppBundle/Resources/config/routing/conjuntoPlatos.yml"
+  prefix: /conjunto_platos
+
+app_encargo:
+  resource: "@AppBundle/Resources/config/routing/encargo.yml"
+  prefix: /encargo
+
+app_evento:
+  resource: "@AppBundle/Resources/config/routing/evento.yml"
+  prefix: /evento
+
+app_horario:
+  resource: "@AppBundle/Resources/config/routing/horario.yml"
+  prefix: /horario
+
+app_ingrediente:
+  resource: "@AppBundle/Resources/config/routing/ingrediente.yml"
+  prefix: /ingrediente
+
+app_menu:
+  resource: "@AppBundle/Resources/config/routing/menu.yml"
+  prefix: /menu
+
+app_plato:
+  resource: "@AppBundle/Resources/config/routing/plato.yml"
+  prefix: /plato
+
+app_restaurante:
+  resource: "@AppBundle/Resources/config/routing/restaurante.yml"
+  prefix: /restaurante
+
+app_usuario:
+  resource: "@AppBundle/Resources/config/routing/usuario.yml"
+  prefix: /usuario

@@ -1,0 +1,34 @@
+plato_prueba:
+  path: /
+  defaults: { _controller: "AppBundle:Plato:prueba"}
+  methods: GET
+
+plato_nuevo:
+  path: /nuevo
+  defaults: { _controller: "AppBundle:Plato:nuevo"}
+  methods: POST
+
+plato_editar:
+  path: /editar/{id}
+  defaults: { _controller: "AppBundle:Plato:nuevo", id:null}
+  methods: POST
+
+plato_lista:
+  path: /lista/{categoria}
+  defaults: { _controller: "AppBundle:Plato:lista", categoria:null}
+  methods: POST
+
+plato_lista_informacion:
+  path: /lista-informacion/{categoria}
+  defaults: { _controller: "AppBundle:Plato:listaInformacion", categoria:null}
+  methods: POST
+
+plato_informacion:
+  path: /informacion/{id}
+  defaults: { _controller: "AppBundle:Plato:informacion", id:null}
+  methods: POST
+
+plato_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Plato:eliminar", id:null}
+  methods: POST
